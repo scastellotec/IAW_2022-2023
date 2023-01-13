@@ -1,0 +1,38 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form id="demoForm" action="access.php" method="get">
+            <input type="text" id="username" name="userName" placeholder="enter name">
+            <input type="submit" id="btnenvio" value="go" disabled="true">  
+        </form>
+        <script>
+            //get a reference to the form and save it in the var form 
+            let userName = document.getElementById("username");
+            let envio = document.getElementById("btnenvio");
+
+            username.addEventListener("input", ()=>{
+                if(username.value.length < 6){
+                    console.log("Es muy pequeño");
+                    envio.disabled = true;
+                }else{
+                    console.log("Todo ok");
+                    envio.disabled = false;
+                }
+            });
+
+            let form = document.getElementById("demoForm");
+
+         /*   function prueba(event){
+                if(form.userName.value.length < 6){
+                    console.log("Es muy pequeño");
+                    event.preventDefault();
+                }else{
+                    console.log("Todo ok")
+                }
+            }
+            form.addEventListener("submit", prueba);*/
+        </script>
+    </body>
+</html>
